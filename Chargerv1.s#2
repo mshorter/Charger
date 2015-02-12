@@ -4545,6 +4545,63 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Electromechanical">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find anything that moves- switches, relays, buttons, potentiometers. Also, anything that goes on a board but isn't electrical in nature- screws, standoffs, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="STAND-OFF">
+<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.302"/>
+</package>
+<package name="STAND-OFF-TIGHT">
+<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.048"/>
+</package>
+</packages>
+<symbols>
+<symbol name="STAND-OFF">
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="STAND-OFF" prefix="STANDOFF">
+<description>&lt;b&gt;#4 Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<gates>
+<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="STAND-OFF">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TIGHT" package="STAND-OFF-TIGHT">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4564,7 +4621,9 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
+<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
+<attribute name="DESIGNER" value="Michelle"/>
+</part>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="-JST-2MM-SMT"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="3.5MM"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="POWER_JACK" device="PTH_LOCK"/>
@@ -4573,11 +4632,18 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="5V" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
 <part name="B1" library="Battery Holder 18650" deviceset="BATTERY" device="18650"/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="V_BATT" device=""/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M02" device="3.5MM"/>
+<part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
+<part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="STANDOFF3" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="STANDOFF4" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4594,7 +4660,9 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <instance part="GND2" gate="1" x="83.82" y="81.28"/>
 <instance part="GND3" gate="1" x="88.9" y="73.66"/>
 <instance part="GND4" gate="1" x="33.02" y="81.28"/>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="FRAME1" gate="G$1" x="0" y="0">
+<attribute name="DESIGNER" x="0" y="0" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="FRAME1" gate="V" x="116.84" y="2.54"/>
 <instance part="JP1" gate="G$1" x="43.18" y="43.18" rot="R90"/>
 <instance part="JP3" gate="G$1" x="27.94" y="43.18" rot="R90"/>
@@ -4604,11 +4672,18 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <instance part="GND5" gate="1" x="96.52" y="76.2"/>
 <instance part="GND6" gate="1" x="33.02" y="101.6"/>
 <instance part="GND7" gate="1" x="12.7" y="30.48"/>
-<instance part="SUPPLY1" gate="G$1" x="33.02" y="127"/>
+<instance part="5V" gate="G$1" x="33.02" y="127"/>
 <instance part="SUPPLY2" gate="G$1" x="43.18" y="99.06"/>
 <instance part="B1" gate="B1" x="12.7" y="43.18" rot="R270"/>
 <instance part="SUPPLY3" gate="G$1" x="12.7" y="55.88"/>
 <instance part="SUPPLY4" gate="G$1" x="86.36" y="96.52"/>
+<instance part="JP2" gate="G$1" x="53.34" y="124.46" rot="MR180"/>
+<instance part="SUPPLY5" gate="G$1" x="60.96" y="132.08"/>
+<instance part="GND8" gate="1" x="60.96" y="111.76"/>
+<instance part="STANDOFF1" gate="G$1" x="180.34" y="33.02"/>
+<instance part="STANDOFF2" gate="G$1" x="185.42" y="33.02"/>
+<instance part="STANDOFF3" gate="G$1" x="190.5" y="33.02"/>
+<instance part="STANDOFF4" gate="G$1" x="195.58" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -4669,6 +4744,11 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="50.8" x2="40.64" y2="50.8" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="60.96" y1="121.92" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$7" class="0">
 <segment>
@@ -4683,7 +4763,7 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <pinref part="J1" gate="G$1" pin="PWR"/>
 <wire x1="25.4" y1="114.3" x2="33.02" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="114.3" x2="33.02" y2="127" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
+<pinref part="5V" gate="G$1" pin="5V"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
@@ -4703,6 +4783,11 @@ LilyPad 1206- DIO-09909&lt;br&gt;
 <pinref part="SUPPLY2" gate="G$1" pin="5V"/>
 <wire x1="43.18" y1="93.98" x2="43.18" y2="99.06" width="0.1524" layer="91"/>
 <junction x="43.18" y="93.98"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="132.08" x2="60.96" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="G$1" pin="5V"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">
